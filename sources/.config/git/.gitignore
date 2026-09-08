@@ -1,0 +1,9 @@
+# Personal IDE
+/.vscode
+
+# Personal notes
+/my-notes/*
+/**/notes.txt
+
+# Generated binaries
+.bin

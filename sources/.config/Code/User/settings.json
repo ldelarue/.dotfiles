@@ -1,0 +1,24 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.tree.indent": 16,
+    "gitlens.defaultDateLocale": null,
+    "gitlens.defaultDateFormat": null,
+    "editor.inlineSuggest.enabled": true,
+    "autoDocstring.docstringFormat": "sphinx-notypes",
+    "editor.formatOnSave": true,
+    "jupyter.debugJustMyCode": false,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "yaml": true,
+        "go": true
+    },
+    "files.associations": {
+        "*.txt": "plaintext"
+    },
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "workbench.settings.applyToAllProfiles": [
+        "terminal.integrated.fontFamily"
+    ]
+}
