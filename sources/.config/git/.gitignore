@@ -2,7 +2,7 @@
 /.vscode
 
 # Personal notes
-/my-notes/*
+/notes/*
 /**/notes.txt
 
 # Generated binaries
