@@ -1,0 +1,13 @@
+[
+  {
+    "agentHosts": [
+      "claude-code"
+    ],
+    "pinned": false,
+    "scope": "user",
+    "skillName": "diataxis",
+    "sourceURL": "https://github.com/joshuadavidthomas/agent-skills",
+    "version": "main"
+  }
+]
+
