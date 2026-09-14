@@ -1,0 +1,25 @@
+[tools]
+fzf = "latest"
+gh = "latest"
+jq = "latest"
+shellcheck = "latest"
+
+[tasks.skills-lock]
+description = "Write the installed GitHub Copilot skills lockfile"
+run = 'gh skill list --json skillName,sourceURL,scope,version,pinned,agentHosts > "$HOME/.dotfiles/skills/skills.lock.json"'
+
+[tasks.restore-skills]
+description = "Reinstall GitHub Copilot skills from the lockfile"
+run = '''
+set -eu
+
+jq -c '.[]' "$HOME/.dotfiles/skills/skills.lock.json" | while IFS= read -r entry; do
+	repo=$(printf '%s' "$entry" | jq -r '.sourceURL' | sed 's#https://github.com/##')
+	name=$(printf '%s' "$entry" | jq -r '.skillName')
+	version=$(printf '%s' "$entry" | jq -r '.version')
+	scope=$(printf '%s' "$entry" | jq -r '.scope')
+	agent=$(printf '%s' "$entry" | jq -r '.agentHosts[0]')
+	printf 'Installing %s from %s@%s (%s, %s)\n' "$name" "$repo" "$version" "$scope" "$agent"
+	gh skill install "$repo" "$name@$version" --agent "$agent" --scope "$scope" -f
+done
+'''

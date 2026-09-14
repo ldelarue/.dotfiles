@@ -26,5 +26,5 @@ else
   git clone "$repository_url" "$repository_dir"
 fi
 
-"$repository_dir/scripts/install-deps.sh"
-exec "$repository_dir/scripts/save.sh"
+"$repository_dir/scripts/save.sh"
+exec "$repository_dir/scripts/install-deps.sh"

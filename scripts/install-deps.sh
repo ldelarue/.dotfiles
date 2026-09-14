@@ -22,4 +22,4 @@ if [ ! -x "$mise_bin" ]; then
   curl -fsSL https://mise.run | sh
 fi
 
-"$mise_bin" use --global gh@latest
+"$mise_bin" install

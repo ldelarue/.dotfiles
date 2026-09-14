@@ -115,3 +115,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Activate the local mise environment for zsh
 eval "$(~/.local/bin/mise activate zsh)"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/ladelaru/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
