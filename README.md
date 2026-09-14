@@ -40,10 +40,8 @@ the current `gh skill list` output to [skills/skills.lock.json](skills/skills.lo
 
 | Path | Purpose |
 |---|---|
-| `scripts/install.sh` | Entry point: clones/updates the repo, syncs dotfiles, then installs dependencies |
-| `scripts/install-deps.sh` | Installs oh-my-zsh, the powerlevel10k theme, the zsh-syntax-highlighting plugin, Mise, and all tools declared in the global Mise configuration |
-| `scripts/save.sh` | Symlinks every file under `sources/` to the matching path under `$HOME` |
-| `sources/` | Mirrors the `$HOME` layout; each file here is symlinked into place by `save.sh` |
+| `scripts/install.sh` | Clones/updates the repo, symlinks files under `sources/`, installs shell dependencies and Mise, then installs all declared Mise tools |
+| `sources/` | Mirrors the `$HOME` layout; its files are symlinked during installation |
 | `skills/skills.lock.json` | Reproducible manifest of installed `gh skill` agent skills |
 
 ## Explanation: why machine-specific secrets aren't in `sources/.zshrc`
