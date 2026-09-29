@@ -1,0 +1,5 @@
+# Private machine/employer-specific aliases: anything in here stays local
+sources/.aliases/
+
+# Private machine/employer-specific mise settings: anything in here stays local
+sources/.config/mise/conf.d/
